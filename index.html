@@ -21,7 +21,7 @@
 <body>
 
     <!-- Header -->
-    <header>
+    <header class="fixed-top">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar bg-dark fixed-top" data-aos="fade-down" data-aos-duration="1000">
             <div id="menu" class="container">
@@ -35,6 +35,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Proyectos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                     </ul>
                     <button id="dark-mode-toggle" class="btn btn-outline-dark ms-3 mt-2 mt-md-0 me-2 me-md-3">
@@ -59,7 +60,7 @@
         <!-- About -->
         <section id="about" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5" data-aos="fade-down">Sobre Mí</h2>
+                <h2 class="text-center mb-5"  data-aos="fade-down" data-aos-duration="1000">Sobre Mí</h2>
                 <div class="row">
                     <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
                         <h3>Descripción</h3>
@@ -89,7 +90,7 @@
         <!-- Portfolio -->
         <section id="portfolio" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-5">Proyectos</h2>
+                <h2 class="text-center mb-5"  data-aos="fade-down" data-aos-duration="1000">Proyectos</h2>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
                         <div class="card h-100 shadow hover-card" data-aos="flip-up" data-aos-delay="150">
@@ -131,7 +132,7 @@
         <!-- Services -->
         <section id="services" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5">Servicios</h2>
+                <h2 class="text-center mb-5"  data-aos="fade-down" data-aos-duration="1000">Servicios</h2>
                 <div id="servicesCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -194,10 +195,140 @@
             </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact" class="py-5 bg-light">
+        <!-- Blog -->
+        <section id="blog" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-5">Contacto</h2>
+                <h2 class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Blog</h2>
+        
+                <!-- Navbar de tabulación -->
+                <ul class="nav nav-tabs" id="blogTab" role="tablist" data-aos="fade-up" data-aos-duration="800">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#homeBlog" role="tab"
+                            aria-controls="home" aria-selected="true">Recientes</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+                            aria-controls="profile" aria-selected="false">Populares</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
+                            aria-controls="contact" aria-selected="false">Categorías</a>
+                    </li>
+                </ul>
+        
+                <!-- Contenido de las pestañas -->
+                <div class="tab-content mt-4" id="blogTabContent">
+                    <div class="tab-pane fade show active" id="homeBlog" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row mb-5">
+                            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                                <div class="card">
+                                    <img src="img/post1.jpeg" class="card-img-top" alt="Post 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Explorando las Últimas Tendencias en Tecnología</h5>
+                                        <p class="card-text">Explora las últimas tendencias en tecnología que están marcando la diferencia. En este artículo, profundizamos en los dispositivos más innovadores del 2025 y cómo cambiarán nuestra vida diaria.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1200">
+                                <div class="card">
+                                    <img src="img/post2.jpeg" class="card-img-top" alt="Post 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">El Futuro del Trabajo: AI y Teletrabajo</h5>
+                                        <p class="card-text">El futuro del trabajo: cómo la inteligencia artificial y el teletrabajo están transformando la manera en que colaboramos. Un análisis sobre las nuevas tendencias laborales.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1400">
+                                <div class="card">
+                                    <img src="img/post3.jpeg" class="card-img-top" alt="Post 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Turismo Espacial: ¿Una Realidad para Todos?</h5>
+                                        <p class="card-text">Viajes espaciales para todos: ¿estamos cerca de hacer del turismo espacial una realidad accesible? Descubre los avances más recientes en esta fascinante industria.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row">
+                            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+                                <div class="card">
+                                    <img src="img/popular1.jpeg" class="card-img-top" alt="Post Popular 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">La Inteligencia Artificial en la Educación</h5>
+                                        <p class="card-text">La inteligencia artificial en la educación: El impacto de la IA en el aprendizaje y la enseñanza. Este post está siendo uno de los más leídos debido a su relevancia en el campo de la educación moderna.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1200">
+                                <div class="card">
+                                    <img src="img/popular2.jpeg" class="card-img-top" alt="Post Popular 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Redes Sociales y Salud Mental</h5>
+                                        <p class="card-text">Cómo las redes sociales afectan nuestra salud mental: Un debate sobre las consecuencias de las interacciones virtuales constantes y sus efectos psicológicos.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1400">
+                                <div class="card">
+                                    <img src="img/popular3.jpeg" class="card-img-top" alt="Post Popular 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Moda Sostenible: El Futuro de la Industria Textil</h5>
+                                        <p class="card-text">Sostenibilidad en la moda: Cómo las marcas están adoptando prácticas ecológicas para reducir su huella de carbono y promover la moda responsable.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="row">
+                            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="card">
+                                    <img src="img/category1.jpeg" class="card-img-top" alt="Categoría 1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tecnología</h5>
+                                        <p class="card-text">Los avances tecnológicos más impactantes del siglo XXI, desde IA hasta nanotecnología. Todo lo que necesitas saber.</p>
+                                        <a href="#" class="btn btn-primary">Ver Categoría</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="card">
+                                    <img src="img/category2.jpeg" class="card-img-top" alt="Categoría 2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salud y Bienestar</h5>
+                                        <p class="card-text">Artículos sobre cómo mantener una vida saludable en la era moderna, desde la dieta hasta el ejercicio.</p>
+                                        <a href="#" class="btn btn-primary">Ver Categoría</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1400">
+                                <div class="card">
+                                    <img src="img/category3.jpeg" class="card-img-top" alt="Categoría 3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Viajes y Aventura</h5>
+                                        <p class="card-text">Guías para los viajeros más intrépidos, consejos sobre destinos exóticos y cómo hacer de tu viaje una experiencia inolvidable.</p>
+                                        <a href="#" class="btn btn-primary">Ver Categoría</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Contact -->
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Contacto</h2>
                 <form class="needs-validation" novalidate data-aos="zoom-in-up" data-aos-duration="800"
                     id="contactForm">
                     <div class="mb-3">
