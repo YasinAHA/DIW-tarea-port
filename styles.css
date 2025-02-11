@@ -1,0 +1,110 @@
+/* Cambiar color primario */
+.navbar {
+    background-color: #FFF !important;
+}
+
+
+.navbar-brand {
+    color: black !important;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.bg-primary {
+    background-color: #5f9edd !important;
+}
+
+/* Animaciones con AOS */
+[data-aos] {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.progress-bar {
+    /* Inicia en 0% */
+    width: 0%;
+    transition: width 1.5s ease-in-out !important;
+}
+
+/* Hover effect */
+.hover-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5) !important;
+    /* Color llamativo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+.dark-mode .navbar {
+    background-color: #222 !important;
+}
+
+.dark-mode .navbar-toggler {
+    background-color: #555 !important;
+}
+
+.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.dark-mode .bg-primary {
+    background-color: #2c3e50 !important;
+}
+
+.dark-mode .card {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+/* Hover effect */
+.dark-mode .hover-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgb(2, 41, 83) !important;
+    /* Color llamativo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode .progress-bar {
+    /*  background-color: #bbb; */
+    background-color: #03507c;
+}
+
+.dark-mode .btn {
+    background-color: #555;
+    color: white;
+}
+
+.dark-mode a {
+    color: #9cdbff !important;
+}
+
+.dark-mode .bg-light {
+    background-color: #222 !important;
+}
+
+.dark-mode .carousel-dark .carousel-control-next-icon,
+.dark-mode .carousel-dark .carousel-control-prev-icon {
+    filter: invert(0) grayscale(100);
+}
+
+.dark-mode .footer {
+    background-color: #000000 !important;
+}
+
+/* .card-img-top {
+    height: 0%;
+    object-fit: cover;
+    transition: height 0.5s ease-in-out;
+}
+
+.card:hover .card-img-top {
+    height: 100%
+}
+ */
