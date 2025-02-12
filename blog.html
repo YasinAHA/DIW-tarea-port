@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Blog sobre tecnología, innovación, y tendencias futuras. Lee nuestros artículos sobre IA, turismo espacial y más.">
+    <meta name="keywords" content="tecnología, IA, teletrabajo, turismo espacial, sostenibilidad, salud mental">
+    <title>Blog</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha384-..." crossorigin="anonymous">
+    <!-- Bootstrap JS y AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <!-- Bootstrap Bundle con Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- CSS y JS personalizados -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="fixed-top">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar bg-dark fixed-top" data-aos="fade-down" data-aos-duration="1000">
+            <div id="menu" class="container">
+                <a class="navbar-brand" href="#">Mi Blog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="./">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./#about">Sobre mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./#portfolio">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./#services">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./#contact">Contacto</a></li>
+                    </ul>
+                    <button id="dark-mode-toggle" class="btn btn-outline-dark ms-3 mt-2 mt-md-0 me-2 me-md-3">
+                        <i id="dark-mode-icon" class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Blog -->
+        <section id="blog" class="mt-5 py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Blog</h2>
+
+                <!-- Navbar de tabulación -->
+                <ul class="nav nav-tabs" id="blogTab" role="tablist" data-aos="fade-up" data-aos-duration="800">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#homeBlog" role="tab"
+                            aria-controls="home" aria-selected="true" style="font-weight: bold;">Recientes</a>
+
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+                            aria-controls="profile" aria-selected="false">Populares</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
+                            aria-controls="contact" aria-selected="false">Categorías</a>
+                    </li>
+                </ul>
+
+                <!-- Contenido de las pestañas -->
+                <div class="tab-content mt-5" id="blogTabContent">
+                    <div class="tab-pane fade show active" id="homeBlog" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row mb-5">
+                            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1000">
+                                <div class="card shadow hover-card mb-5">
+                                    <img src="img/post1.jpeg" class="card-img-top" alt="Post 1" loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Explorando las Últimas Tendencias en Tecnología</h5>
+                                        <p class="card-text">Explora las últimas tendencias en tecnología que están
+                                            marcando
+                                            la diferencia. En este artículo, profundizamos en los dispositivos más
+                                            innovadores del 2025 y cómo cambiarán nuestra vida diaria.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1200">
+                                <div class="card shadow hover-card mb-5">
+                                    <img src="img/post2.jpeg" class="card-img-top" alt="Post 2" loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="card-title">El Futuro del Trabajo: AI y Teletrabajo</h5>
+                                        <p class="card-text">El futuro del trabajo: cómo la inteligencia artificial y el
+                                            teletrabajo están transformando la manera en que colaboramos. Un análisis
+                                            sobre
+                                            las nuevas tendencias laborales.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="flip-left" data-aos-duration="1400">
+                                <div class="card shadow hover-card mb-5">
+                                    <img src="img/post3.jpeg" class="card-img-top" alt="Post 3" loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Turismo Espacial: ¿Una Realidad para Todos?</h5>
+                                        <p class="card-text">Viajes espaciales para todos: ¿estamos cerca de hacer del
+                                            turismo espacial una realidad accesible? Descubre los avances más recientes
+                                            en
+                                            esta fascinante industria.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row">
+                            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+                                <div class="card shadow hover-card mb-5">
+                                    <img src="img/popular1.jpeg" class="card-img-top" alt="Post Popular 1"
+                                        loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="card-title">La Inteligencia Artificial en la Educación</h5>
+                                        <p class="card-text">La inteligencia artificial en la educación: El impacto de
+                                            la IA
+                                            en el aprendizaje y la enseñanza. Este post está siendo uno de los más
+                                            leídos
+                                            debido a su relevancia en el campo de la educación moderna.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1200">
+                                <div class="card shadow hover-card mb-5">
+                                    <img src="img/popular2.jpeg" class="card-img-top" alt="Post Popular 2"
+                                        loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Redes Sociales y Salud Mental</h5>
+                                        <p class="card-text">Cómo las redes sociales afectan nuestra salud mental: Un
+                                            debate
+                                            sobre las consecuencias de las interacciones virtuales constantes y sus
+                                            efectos
+                                            psicológicos.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1400">
+                                <div class="card shadow hover-card mb-5">
+                                    <img src="img/popular3.jpeg" class="card-img-top" alt="Post Popular 3"
+                                        loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Moda Sostenible: El Futuro de la Industria Textil</h5>
+                                        <p class="card-text">Sostenibilidad en la moda: Cómo las marcas están adoptando
+                                            prácticas ecológicas para reducir su huella de carbono y promover la moda
+                                            responsable.</p>
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="row">
+                            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="card shadow hover-card mb-5">
+                                    <img src="img/category1.jpeg" class="card-img-top" alt="Categoría 1" loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tecnología</h5>
+                                        <p class="card-text">Los avances tecnológicos más impactantes del siglo XXI,
+                                            desde
+                                            IA hasta nanotecnología. Todo lo que necesitas saber.</p>
+                                        <a href="#" class="btn btn-primary">Ver Categoría</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1200">
+                                <div class="card shadow hover-card mb-5">
+                                    <img src="img/category2.jpeg" class="card-img-top" alt="Categoría 2" loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Salud y Bienestar</h5>
+                                        <p class="card-text">Artículos sobre cómo mantener una vida saludable en la era
+                                            moderna, desde la dieta hasta el ejercicio.</p>
+                                        <a href="#" class="btn btn-primary">Ver Categoría</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1400">
+                                <div class="card shadow hover-card mb-5">
+                                    <img src="img/category3.jpeg" class="card-img-top" alt="Categoría 3" loading="lazy">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Viajes y Aventura</h5>
+                                        <p class="card-text">Guías para los viajeros más intrépidos, consejos sobre
+                                            destinos
+                                            exóticos y cómo hacer de tu viaje una experiencia inolvidable.</p>
+                                        <a href="#" class="btn btn-primary">Ver Categoría</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-4">
+        <!--  data-aos="fade-up" data-aos-delay="100" -->
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="#" class="text-light mx-3" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="text-light mx-3" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <p>&copy; <span id="year"></span> Yassine Ait El Hadj Ahajtan | Desarrollador Web</p>
+        </div>
+    </footer>
+</body>
+
+</html>

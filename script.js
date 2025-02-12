@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     if (!(window.innerWidth < 768)) {
-        observer.observe(document.querySelector('#about'));
+        if (document.querySelector('#about')) {
+            observer.observe(document.querySelector('#about'));
+        }
     } else {
         document.querySelectorAll('.progress-bar').forEach(bar => {
             const width = bar.getAttribute('data-width');

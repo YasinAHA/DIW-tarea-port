@@ -32,7 +32,7 @@
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5) !important;
     /* Color llamativo */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Modo oscuro */
@@ -68,7 +68,7 @@
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgb(2, 41, 83) !important;
     /* Color llamativo */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .dark-mode .progress-bar {
