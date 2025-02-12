@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Inicialización de AOS (Animaciones al hacer scroll)
     AOS.init({
         once: false,
         disable: window.innerWidth <= 768
     });
 
+    // Animación de las barras de progreso
     const animateBars = () => {
         document.querySelectorAll('.progress-bar').forEach(bar => {
             setTimeout(() => {
@@ -17,15 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateBars();
-                //observer.unobserve(entry.target); // Dejar de observar después de ejecutar
             } else {
                 document.querySelectorAll('.progress-bar').forEach(bar => {
                     bar.style.width = 0;
                 });
             }
         });
-    }, { threshold: 0.5 }); // Dispara cuando al menos el 50% del elemento es visible
-
+    }, { threshold: 0.5 });
 
     if (!(window.innerWidth < 768)) {
         if (document.querySelector('#about')) {
@@ -43,13 +43,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const body = document.body;
     const icon = document.getElementById('dark-mode-icon');
 
-    // Verificar si el usuario ya ha activado el modo oscuro antes
     if (localStorage.getItem('darkMode') === 'enabled') {
         body.classList.add('dark-mode');
         icon.classList.replace('fa-moon', 'fa-sun');
     }
 
-    // Alternar el modo oscuro al hacer clic
     toggleButton.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
 
@@ -62,36 +60,60 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-   /*  const ajustarContainer = () => {
-        const container = document.getElementById('menu');
-
-        if (container) { // Verifica que el elemento existe antes de manipularlo
-            container.classList.toggle("container-fluid", window.matchMedia("(max-width: 768px)").matches);
-            container.classList.toggle("container", !window.matchMedia("(max-width: 768px)").matches);
-        }
-    }
-
-    // Ejecutar en la carga de la página
-    ajustarContainer();
-
-    // Ejecutar cuando cambia el tamaño de la ventana
-    window.addEventListener("resize", ajustarContainer); */
-
-    const form = document.querySelector('form.needs-validation');  // Selecciona el formulario
+    // Formulario de contacto con simulación de API
+    const form = document.querySelector('form.needs-validation');
 
     if (form) {
         form.addEventListener('submit', function (event) {
             if (!form.checkValidity()) {
                 event.preventDefault();
                 event.stopPropagation();
-            }
+            } else {
+                event.preventDefault();
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
 
+                fetch("https://jsonplaceholder.typicode.com/posts", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name, email, message })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        
+                        document.getElementById("modalMessage").textContent = "Mensaje enviado correctamente.";
+                        
+                        // Inicializar y mostrar el modal
+                        const modal = document.getElementById("responseModal");
+                        const modalInstance = new bootstrap.Modal(modal);
+
+                        modalInstance.show();
+                        modal.removeAttribute("aria-hidden");
+
+                        modal.addEventListener('hidden.bs.modal', () => {
+                            modal.setAttribute("aria-hidden", "true");
+                        });
+                    })
+                    .catch(error => {
+                        document.getElementById("modalMessage").textContent = "Error al enviar el mensaje.";
+                        
+                        const modal = document.getElementById("responseModal");
+                        const modalInstance = new bootstrap.Modal(modal);
+
+                        modalInstance.show();
+                        modal.removeAttribute("aria-hidden");
+
+                        modal.addEventListener('hidden.bs.modal', () => {
+                            modal.setAttribute("aria-hidden", "true");
+                        });
+                    });
+            }
             form.classList.add('was-validated');
         });
     }
 
-
     // Año actual
     document.getElementById("year").textContent = (new Date()).getFullYear();
-
 });

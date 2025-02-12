@@ -66,7 +66,7 @@
         <!-- About -->
         <section id="about" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5"  data-aos="fade-down" data-aos-duration="1000">Sobre Mí</h2>
+                <h2 class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Sobre Mí</h2>
                 <div class="row">
                     <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
                         <h3>Descripción</h3>
@@ -96,7 +96,7 @@
         <!-- Portfolio -->
         <section id="portfolio" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-5"  data-aos="fade-down" data-aos-duration="1000">Proyectos</h2>
+                <h2 class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Proyectos</h2>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
                         <div class="card h-100 shadow hover-card" data-aos="flip-up" data-aos-delay="150">
@@ -138,7 +138,7 @@
         <!-- Services -->
         <section id="services" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5"  data-aos="fade-down" data-aos-duration="1000">Servicios</h2>
+                <h2 class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Servicios</h2>
                 <div id="servicesCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -205,7 +205,7 @@
         <section id="contact" class="py-5 bg-light">
             <div class="container">
                 <h2 class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Contacto</h2>
-                <form class="needs-validation" novalidate data-aos="zoom-in-up" data-aos-duration="800"
+                <form id="contactForm" class="needs-validation" novalidate data-aos="zoom-in-up" data-aos-duration="800"
                     id="contactForm">
                     <div class="mb-3">
                         <label class="form-label" for="name">Nombre</label>
@@ -227,7 +227,32 @@
             </div>
         </section>
 
+        <!-- Modal de Bootstrap -->
+        <div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Estado del envío</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalMessage">
+                        <!-- Aquí se mostrará la respuesta del servidor -->
+                    </div>
+                    <div class="modal-footer">
+                        <!-- Botón adicional con icono -->
+                        <button type="button" class="btn btn-primary" id="confirmButton">
+                            <i class="fas fa-check"></i> Aceptar
+                        </button>
+                        <!-- Botón de cerrar del modal -->
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </main>
+
 
     <!-- Footer -->
     <footer class="footer bg-dark text-light py-4">
